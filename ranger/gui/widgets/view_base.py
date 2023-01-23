@@ -95,6 +95,7 @@ class ViewBase(Widget, DisplayableContainer):  # pylint: disable=too-many-instan
 
     def _draw_info(self, lines):
         self.columns[-1].clear_image(force=True)
+        self.color_reset()
         self.need_clear = True
         hei = min(self.hei - 1, len(lines))
         ystart = self.hei - hei
